@@ -73,6 +73,29 @@ body {
   color: var(--school-orange);
 }
 
+.frsp-dropdown {
+  min-width: 14rem;
+  margin-top: 0.55rem;
+  padding: 0.45rem;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.75rem 2rem rgba(8, 29, 61, 0.16);
+}
+
+.frsp-dropdown .dropdown-item {
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.55rem;
+  color: var(--school-blue-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.frsp-dropdown .dropdown-item:hover,
+.frsp-dropdown .dropdown-item:focus {
+  color: var(--school-blue-dark);
+  background: #fff0df;
+}
+
 .navbar-toggler {
   border-color: rgba(8, 29, 61, 0.35);
 }
@@ -129,6 +152,14 @@ body {
 .hero-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.about-highlight img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  display: block;
+  
 }
 
 .admissions-hero {
@@ -370,8 +401,8 @@ body {
   position: relative;
   min-height: 18rem;
   overflow: hidden;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  border-radius: 1.25rem;
+  
+  border-radius: 0.5rem;
   color: var(--school-white);
   background: linear-gradient(145deg, var(--school-blue), var(--school-blue-dark));
   box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.18);
@@ -666,6 +697,208 @@ body {
   margin: 0 auto;
 }
 
+.infrastructure-panel-heading {
+  padding: clamp(1.4rem, 3vw, 2.25rem);
+  border-bottom: 1px solid #dce3ed;
+  background: linear-gradient(135deg, #f8fafc, #eef3f9);
+}
+
+.infrastructure-panel-heading h3 {
+  margin: 0 0 0.65rem;
+  color: var(--school-blue-dark);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+}
+
+.infrastructure-panel-heading > p:last-child {
+  max-width: 49rem;
+  margin: 0;
+  color: #4a515c;
+  line-height: 1.7;
+}
+
+.infrastructure-subsection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--school-white);
+}
+
+.infrastructure-subsection-grid-support {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.infrastructure-subsection-card {
+  display: grid;
+  min-height: 13.5rem;
+  grid-template-columns: minmax(8.5rem, 38%) 1fr;
+  overflow: hidden;
+  border: 1px solid #dde4ed;
+  border-radius: 0.85rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 0.4rem 1.1rem rgba(8, 29, 61, 0.05);
+}
+
+.infrastructure-subsection-card-wide {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(14rem, 28%) 1fr;
+}
+
+.infrastructure-subsection-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 13.5rem;
+  object-fit: cover;
+  background: #dce3ed;
+}
+
+.infrastructure-subsection-card > div {
+  align-self: center;
+  padding: 1.15rem;
+}
+
+.infrastructure-subsection-card h4 {
+  margin: 0 0 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.infrastructure-subsection-card p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.campus-subsection-carousel {
+  position: relative;
+  padding: 1rem 4.25rem 3.25rem;
+  background: var(--school-white);
+}
+
+.campus-subsection-inner {
+  height: 22.5rem;
+  border: 1px solid #dde4ed;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.7rem 1.8rem rgba(8, 29, 61, 0.08);
+}
+
+.campus-subsection-card {
+  height: 22.5rem;
+  grid-template-columns: minmax(16rem, 42%) 1fr;
+  border: 0;
+  border-radius: 0.85rem;
+  box-shadow: none;
+}
+
+.campus-subsection-card > img {
+  height: 100%;
+}
+
+.campus-subsection-card > div {
+  max-height: 22.5rem;
+  align-self: stretch;
+  overflow-y: auto;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  scrollbar-width: thin;
+}
+
+.campus-subsection-card h4 {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+
+.campus-subsection-card p {
+  max-width: 38rem;
+  font-size: 0.95rem;
+}
+
+.sports-category-label,
+.sports-facility-label {
+  display: inline-block;
+  margin: 0.45rem 0.35rem 0 0;
+  line-height: 1.2;
+}
+
+.sports-category-label {
+  width: 100%;
+  margin-top: 0.8rem;
+  color: var(--school-blue-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sports-facility-label {
+  padding: 0.38rem 0.55rem;
+  border: 1px solid #cbd6e5;
+  border-radius: 999px;
+  color: #3f4650;
+  background: var(--school-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.campus-subsection-indicators.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0.25rem;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.campus-subsection-indicators [data-bs-target] {
+  width: 0.55rem;
+  height: 0.55rem;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #b8c2d0;
+  opacity: 1;
+}
+
+.campus-subsection-indicators .active {
+  background: var(--school-orange);
+}
+
+.campus-subsection-control {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  transform: translateY(-50%);
+  border: 1px solid #ccd6e3;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: var(--school-white);
+  font-size: 1.1rem;
+  place-items: center;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.campus-subsection-prev {
+  left: 0.75rem;
+}
+
+.campus-subsection-next {
+  right: 0.75rem;
+}
+
+.campus-subsection-control:hover,
+.campus-subsection-control:focus-visible {
+  border-color: var(--school-blue);
+  color: var(--school-white);
+  background: var(--school-blue);
+}
+
 .infrastructure-tabs.carousel-indicators {
   position: static;
   display: grid;
@@ -921,6 +1154,927 @@ body {
   text-align: center;
 }
 
+.design-thinking-section {
+  background:
+    radial-gradient(circle at 100% 0, rgba(242, 140, 40, 0.1), transparent 24rem),
+    var(--school-offwhite);
+}
+
+.design-thinking-copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dce3ed;
+  border-radius: 1.25rem;
+  background: var(--school-white);
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.07);
+}
+
+.design-thinking-copy > p:not(.section-kicker) {
+  max-width: 39rem;
+  color: #4a515c;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.design-thinking-questions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.design-thinking-questions span {
+  padding: 0.75rem 0.85rem;
+  border-left: 3px solid var(--school-orange);
+  border-radius: 0 0.65rem 0.65rem 0;
+  color: var(--school-blue-dark);
+  background: #edf3fa;
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+
+.design-thinking-image {
+  position: relative;
+  height: 100%;
+  min-height: 20rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #dce3ed;
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.12);
+}
+
+.design-thinking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.design-thinking-image figcaption {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.design-thinking-image figcaption span {
+  flex: 1;
+  padding: 0.65rem 0.25rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: rgba(8, 29, 61, 0.88);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.design-thinking-heading h3 {
+  margin-bottom: 1.25rem;
+  color: var(--school-blue-dark);
+  font-weight: 800;
+}
+
+.design-thinking-step {
+  height: 100%;
+  min-height: 10.5rem;
+  padding: 1.15rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-white);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.06);
+}
+
+.design-thinking-step span {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.85rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: var(--school-orange-light);
+  font-weight: 850;
+  place-items: center;
+}
+
+.design-thinking-step h4 {
+  margin-bottom: 0.35rem;
+  color: var(--school-blue-dark);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.design-thinking-step p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.design-thinking-grade-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.design-thinking-grade-card {
+  display: flex;
+  min-height: 15.5rem;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-white);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.grade-level {
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: var(--school-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.design-thinking-grade-card h4 {
+  margin-bottom: 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.design-thinking-grade-card p {
+  flex: 1;
+  color: #4a515c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.design-thinking-grade-card > span {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e3e8ef;
+  color: var(--school-orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.design-thinking-benefits {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.design-thinking-benefits article {
+  display: flex;
+  min-height: 6.5rem;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  background: var(--school-white);
+}
+
+.design-thinking-benefits article span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 2.25rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: #fff0df;
+  font-size: 0.72rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.design-thinking-benefits article p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.design-thinking-example {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.35fr) 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  color: var(--school-white);
+  background: linear-gradient(135deg, var(--school-blue), var(--school-blue-dark));
+}
+
+.design-thinking-example h3 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.design-thinking-example > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+}
+
+.ai-robotics-section {
+  background:
+    radial-gradient(circle at 100% 0, rgba(242, 140, 40, 0.11), transparent 25rem),
+    var(--school-offwhite);
+}
+
+.ai-robotics-copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dce3ed;
+  border-radius: 1.25rem;
+  background: var(--school-white);
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.07);
+}
+
+.ai-robotics-copy > p:not(.section-kicker) {
+  max-width: 39rem;
+  color: #4a515c;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.ai-robotics-image {
+  position: relative;
+  height: 100%;
+  min-height: 20rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #dce3ed;
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.12);
+}
+
+.ai-robotics-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-robotics-image figcaption {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.ai-robotics-image figcaption span {
+  flex: 1;
+  padding: 0.65rem 0.25rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: rgba(8, 29, 61, 0.88);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.ai-robotics-heading h3 {
+  margin-bottom: 1.25rem;
+  color: var(--school-blue-dark);
+  font-weight: 800;
+}
+
+.ai-robotics-grade-grid,
+.ai-robotics-project-grid,
+.ai-robotics-benefits {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ai-robotics-grade-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.ai-robotics-grade-card {
+  display: flex;
+  min-height: 16rem;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-white);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.ai-grade-level {
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: var(--school-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.ai-robotics-grade-card h4,
+.ai-robotics-project-grid h4 {
+  margin-bottom: 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.ai-robotics-grade-card p,
+.ai-robotics-project-grid p {
+  color: #4a515c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.ai-robotics-grade-card p {
+  flex: 1;
+}
+
+.ai-robotics-grade-card > span {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e3e8ef;
+  color: var(--school-orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.ai-robotics-project-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.ai-robotics-project-grid article {
+  min-height: 10.5rem;
+  padding: 1rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-white);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.ai-robotics-project-grid article > span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: var(--school-orange-light);
+  font-size: 0.72rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.ai-robotics-project-grid p {
+  margin: 0;
+}
+
+.ai-robotics-benefits {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.ai-robotics-benefits article {
+  display: flex;
+  min-height: 6.5rem;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  background: var(--school-white);
+}
+
+.ai-robotics-benefits article span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 2.25rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: #fff0df;
+  font-size: 0.72rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.ai-robotics-benefits article p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.stem-explorers-section {
+  background:
+    radial-gradient(circle at 0 20%, rgba(242, 140, 40, 0.09), transparent 24rem),
+    var(--school-white);
+}
+
+.stem-explorers-copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dce3ed;
+  border-radius: 1.25rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.07);
+}
+
+.stem-explorers-copy > p:not(.section-kicker) {
+  max-width: 39rem;
+  margin: 0;
+  color: #4a515c;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.stem-explorers-image {
+  position: relative;
+  height: 100%;
+  min-height: 20rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #dce3ed;
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.12);
+}
+
+.stem-explorers-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stem-explorers-image figcaption {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  padding: 0.75rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: rgba(8, 29, 61, 0.88);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.stem-section-heading h3 {
+  margin-bottom: 1.25rem;
+  color: var(--school-blue-dark);
+  font-weight: 800;
+}
+
+.stem-component-card {
+  height: 100%;
+  min-height: 11.5rem;
+  padding: 1.15rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.06);
+}
+
+.stem-component-card span {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.85rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: var(--school-orange-light);
+  font-weight: 850;
+  place-items: center;
+}
+
+.stem-component-card h4 {
+  margin-bottom: 0.35rem;
+  color: var(--school-blue-dark);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.stem-component-card p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.stem-grade-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.stem-grade-card {
+  display: flex;
+  min-height: 15.5rem;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-white);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.stem-grade-level {
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: var(--school-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.stem-grade-card h4 {
+  margin-bottom: 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.stem-grade-card p {
+  flex: 1;
+  color: #4a515c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.stem-grade-card > span {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e3e8ef;
+  color: var(--school-orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.stem-project {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.35fr) 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  color: var(--school-white);
+  background: linear-gradient(135deg, var(--school-blue), var(--school-blue-dark));
+}
+
+.stem-project h3 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.stem-project > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+}
+
+.stem-benefits {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.stem-benefits article {
+  display: flex;
+  min-height: 6.5rem;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  background: var(--school-offwhite);
+}
+
+.stem-benefits article span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 2.25rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: #fff0df;
+  font-size: 0.72rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.stem-benefits article p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.entrepreneurship-section {
+  background:
+    radial-gradient(circle at 100% 0, rgba(242, 140, 40, 0.12), transparent 25rem),
+    var(--school-white);
+}
+
+.entrepreneurship-copy {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dce3ed;
+  border-radius: 1.25rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.07);
+}
+
+.entrepreneurship-copy > p:not(.section-kicker) {
+  max-width: 39rem;
+  color: #4a515c;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.entrepreneurship-image {
+  position: relative;
+  height: 100%;
+  min-height: 20rem;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: #dce3ed;
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.12);
+}
+
+.entrepreneurship-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entrepreneurship-image figcaption {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.entrepreneurship-image figcaption span {
+  flex: 1;
+  padding: 0.65rem 0.25rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: rgba(8, 29, 61, 0.88);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.entrepreneurship-heading h3 {
+  margin-bottom: 1.25rem;
+  color: var(--school-blue-dark);
+  font-weight: 800;
+}
+
+.entrepreneurship-grade-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.entrepreneurship-grade-card {
+  display: flex;
+  min-height: 16rem;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #dce3ed;
+  border-radius: 1rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.entrepreneurship-grade-level {
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: var(--school-white);
+  background: var(--school-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.entrepreneurship-grade-card h4 {
+  margin-bottom: 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.entrepreneurship-grade-card p {
+  flex: 1;
+  color: #4a515c;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.entrepreneurship-grade-card > span {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e3e8ef;
+  color: var(--school-orange);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.entrepreneurship-project {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.35fr) auto 1fr;
+  align-items: center;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  color: var(--school-white);
+  background: linear-gradient(135deg, var(--school-blue), var(--school-blue-dark));
+}
+
+.entrepreneurship-project h3 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.entrepreneurship-project-steps {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.entrepreneurship-project-steps span {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.entrepreneurship-project > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+}
+
+.entrepreneurship-benefits {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.entrepreneurship-benefits article {
+  display: flex;
+  min-height: 7.25rem;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid #dce3ed;
+  border-radius: 0.85rem;
+  background: var(--school-offwhite);
+}
+
+.entrepreneurship-benefits article span {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 2.25rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: #fff0df;
+  font-size: 0.72rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.entrepreneurship-benefits article p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.future-ready-overview {
+  background: var(--school-offwhite);
+}
+
+.future-ready-overview-card {
+  overflow: hidden;
+  border: 1px solid #dce3ed;
+  border-radius: 1.25rem;
+  background: var(--school-white);
+  box-shadow: 0 1rem 2.5rem rgba(8, 29, 61, 0.08);
+}
+
+.future-ready-overview-heading {
+  max-width: 52rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.future-ready-overview-heading p:not(.section-kicker) {
+  max-width: 48rem;
+  margin: 0;
+  color: #4a515c;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.future-ready-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 0 clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.future-ready-pillar-grid article {
+  min-height: 11rem;
+  padding: 1.15rem;
+  border: 1px solid #dce3ed;
+  border-top: 4px solid var(--school-orange);
+  border-radius: 0.85rem;
+  background: var(--school-offwhite);
+  box-shadow: 0 0.75rem 1.5rem rgba(8, 29, 61, 0.05);
+}
+
+.future-ready-pillar-grid article span {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.85rem;
+  border-radius: 50%;
+  color: var(--school-blue-dark);
+  background: var(--school-orange-light);
+  font-size: 0.75rem;
+  font-weight: 850;
+  place-items: center;
+}
+
+.future-ready-pillar-grid h3 {
+  margin-bottom: 0.45rem;
+  color: var(--school-blue-dark);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.future-ready-pillar-grid p {
+  margin: 0;
+  color: #4a515c;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.future-ready-overview-note {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--school-white);
+  background: linear-gradient(135deg, var(--school-blue), var(--school-blue-dark));
+}
+
+.future-ready-overview-note > span {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: var(--school-orange-light);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.future-ready-overview-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.65;
+}
+
 .director-message {
   overflow: hidden;
   background:
@@ -1156,6 +2310,11 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .frsp-dropdown {
+    width: 100%;
+    margin: 0.35rem 0 0;
+  }
+
   .admissions-copy {
     padding-top: 0.5rem;
   }
@@ -1178,6 +2337,40 @@ body {
     min-height: 0;
   }
 
+  .infrastructure-subsection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .infrastructure-subsection-grid-support,
+  .infrastructure-subsection-card-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .infrastructure-subsection-card-wide {
+    grid-column: auto;
+  }
+
+  .campus-subsection-carousel {
+    padding: 0.85rem 3.5rem 3rem;
+  }
+
+  .campus-subsection-card {
+    height: 20.5rem;
+    grid-template-columns: minmax(12rem, 38%) 1fr;
+  }
+
+  .campus-subsection-inner {
+    height: 20.5rem;
+  }
+
+  .campus-subsection-card > img {
+    height: 100%;
+  }
+
+  .campus-subsection-card > div {
+    max-height: 20.5rem;
+  }
+
   .method-card {
     min-height: 11rem;
   }
@@ -1195,11 +2388,234 @@ body {
     max-height: 24rem;
     margin: 0 auto;
   }
+
+  .design-thinking-grade-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .design-thinking-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stem-grade-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .stem-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-robotics-grade-grid,
+  .ai-robotics-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-robotics-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .entrepreneurship-grade-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .entrepreneurship-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .future-ready-pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .entrepreneurship-project {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 575.98px) {
   .admissions-hero {
     padding-top: 1.5rem;
+  }
+
+  .design-thinking-copy {
+    padding: 1.15rem;
+  }
+
+  .design-thinking-questions {
+    grid-template-columns: 1fr;
+  }
+
+  .design-thinking-image {
+    min-height: 15rem;
+  }
+
+  .design-thinking-grade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-thinking-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .stem-explorers-copy {
+    padding: 1.15rem;
+  }
+
+  .stem-explorers-image {
+    min-height: 15rem;
+  }
+
+  .stem-grade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stem-grade-card {
+    min-height: 0;
+  }
+
+  .stem-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-robotics-copy {
+    padding: 1.15rem;
+  }
+
+  .ai-robotics-image {
+    min-height: 15rem;
+  }
+
+  .ai-robotics-grade-grid,
+  .ai-robotics-project-grid,
+  .ai-robotics-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-robotics-grade-card,
+  .ai-robotics-project-grid article {
+    min-height: 0;
+  }
+
+  .entrepreneurship-copy {
+    padding: 1.15rem;
+  }
+
+  .entrepreneurship-image {
+    min-height: 15rem;
+  }
+
+  .entrepreneurship-grade-grid,
+  .entrepreneurship-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .entrepreneurship-grade-card {
+    min-height: 0;
+  }
+
+  .entrepreneurship-project {
+    grid-template-columns: 1fr;
+  }
+
+  .entrepreneurship-project-steps {
+    flex-wrap: wrap;
+  }
+
+  .future-ready-overview-heading {
+    padding: 1.15rem;
+  }
+
+  .future-ready-pillar-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.15rem 1.15rem;
+  }
+
+  .future-ready-pillar-grid article {
+    min-height: 0;
+  }
+
+  .future-ready-overview-note {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.15rem;
+  }
+
+  .stem-project {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .design-thinking-grade-card {
+    min-height: 0;
+  }
+
+  .design-thinking-example {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .infrastructure-panel-heading {
+    padding: 1.15rem;
+  }
+
+  .infrastructure-subsection-grid {
+    gap: 0.7rem;
+    padding: 0.7rem;
+  }
+
+  .infrastructure-subsection-card,
+  .infrastructure-subsection-card-wide {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .infrastructure-subsection-card > img {
+    height: 10.5rem;
+    min-height: 10.5rem;
+  }
+
+  .infrastructure-subsection-card > div {
+    padding: 0.9rem;
+  }
+
+  .campus-subsection-carousel {
+    padding: 0.7rem 0.7rem 3rem;
+  }
+
+  .campus-subsection-card {
+    height: 31rem;
+  }
+
+  .campus-subsection-card > img {
+    height: 11rem;
+    min-height: 11rem;
+  }
+
+  .campus-subsection-inner {
+    height: 31rem;
+  }
+
+  .campus-subsection-card > div {
+    max-height: 20rem;
+  }
+
+  .campus-subsection-control {
+    top: auto;
+    bottom: 0.55rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    transform: none;
+  }
+
+  .campus-subsection-prev {
+    left: 1rem;
+  }
+
+  .campus-subsection-next {
+    right: 1rem;
+  }
+
+  .campus-subsection-indicators.carousel-indicators {
+    bottom: 0.85rem;
   }
 
   .contact-details-card {
