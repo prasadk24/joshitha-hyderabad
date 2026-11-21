@@ -1063,7 +1063,7 @@ Our supporting staff and security guards are made familiar with first aid proced
                 <h2 class="display-6 fw-bold mb-3">Admission enquiry form</h2>
                 <p class="text-secondary mb-0">Complete the details below and the Joshitha School admissions team will follow up with you.</p>
               </div>
-              <form class="enquiry-form" id="enquiry" name="myForm" method="post" action="https://www.joshithaschool.com/inputenquiries.php">
+              <form name="myForm" method="post" onsubmit="return validateForm()" action="./inputenquiries.php">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label" for="student">Student name</label>
@@ -1075,7 +1075,7 @@ Our supporting staff and security guards are made familiar with first aid proced
                   </div>
                   <div class="col-md-6">
                     <label class="form-label" for="contact">Contact number</label>
-                    <input class="form-control" id="mobile" name="contact" type="tel" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel-national" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Enter a 10-digit contact number without spaces or country code" required>
+                    <input class="form-control" id="mobile" name="contact" type="tel" placeholder="10-digit mobile number" onkeypress="return isNumber(event)" required>
                     <div class="form-text">Enter 10 digits without spaces or country code.</div>
                   </div>
                   <div class="col-md-6">
@@ -1327,6 +1327,46 @@ Our supporting staff and security guards are made familiar with first aid proced
 
       window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
       updateBackToTopVisibility();
+
+       function validateForm(){
+            let student = document.forms["myForm"]["student"].value;
+            let father = document.forms["myForm"]["parent"].value;
+            let contact = document.forms["myForm"]["contact"].value;
+            let dob = document.forms["myForm"]["dob"].value;
+            let grade = document.forms["myForm"]["grade"].value;
+            let message = document.forms["myForm"]["message"].value;
+            if (student == "") {
+                alert("Enter Student Name");
+                return false;
+            } else if (father == "") {
+                alert("Enter Father Name");
+                return false;
+            } else if (contact == "") {
+                alert("Enter Contact Number");
+                return false;
+            } else if (contact.length != 10) {
+                alert("Please enter valid number");
+                return false;
+            }else if (dob == "") {
+                alert("Enter Date of birth");
+                return false;
+            } else if (grade == "") {
+                alert("Enter Class");
+                return false;
+            } else if (message == "") {
+                alert("Enter Comments");
+                return false;
+            }
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
     </script>
   </body>
 </html>
