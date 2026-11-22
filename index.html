@@ -1234,6 +1234,21 @@ Our supporting staff and security guards are made familiar with first aid proced
       </svg>
     </button>
 
+    <div class="modal fade" id="enquiryResultModal" tabindex="-1" aria-labelledby="enquiryResultModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="enquiryResultModalTitle">Enquiry update</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="enquiryResultModalMessage"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const admissionStages = document.getElementById("admissionStages");
@@ -1381,6 +1396,18 @@ Our supporting staff and security guards are made familiar with first aid proced
                 return false;
             }
             return true;
+        }
+
+        let enquiryResultMessage = "";
+        if (window.location.hash === "#enquiry-success") {
+          enquiryResultMessage = "Enquiry submitted successfully";
+        } else if (window.location.hash === "#enquiry-fail") {
+          enquiryResultMessage = "Enquiry submission failed";
+        }
+
+        if (enquiryResultMessage) {
+          document.getElementById("enquiryResultModalMessage").textContent = enquiryResultMessage;
+          bootstrap.Modal.getOrCreateInstance(document.getElementById("enquiryResultModal")).show();
         }
     </script>
   </body>
