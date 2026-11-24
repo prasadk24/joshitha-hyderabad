@@ -3456,12 +3456,12 @@ section[id] {
 }
 
 @media (max-width: 380px) {
-  .brand-school-name {
-    display: none;
+  .brand-copy {
+    max-width: 7.5rem;
   }
 
-  .brand-copy {
-    max-width: 5.5rem;
+  .brand-school-name {
+    white-space: nowrap;
   }
 
   .school-logo {
