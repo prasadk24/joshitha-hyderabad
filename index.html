@@ -1339,6 +1339,15 @@ Our supporting staff and security guards are made familiar with first aid proced
       window.addEventListener("resize", updateActiveNavigation);
       updateActiveNavigation();
 
+      const navigationCollapse = document.getElementById("mainNavigation");
+      navigationCollapse.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.matchMedia("(max-width: 991.98px)").matches) {
+            bootstrap.Collapse.getOrCreateInstance(navigationCollapse, { toggle: false }).hide();
+          }
+        });
+      });
+
       const backToTopButton = document.getElementById("backToTop");
 
       const updateBackToTopVisibility = () => {
